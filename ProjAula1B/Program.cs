@@ -30,7 +30,7 @@ void InserirNoBD(List<PenalidadesAplicadas> lst)
     var conexaosql = ConectarBD();
         foreach (var enterprise in lst)
         {
-        SqlCommand cmd = new SqlCommand("[dbo].[InserirDoJSON]", conexaosql);
+        SqlCommand cmd = new SqlCommand("Insert into EmpresaMotorista (RazaoSocial,CNPJ,NomeMotorista,CPF,VigenciaCadastro)\r\n\tValues\r\n\t(@razao_social,@cnpj,@nome_motorista,@cpf,@vigencia_cadastro)\r\n\t;", conexaosql);
         cmd.CommandType = System.Data.CommandType.StoredProcedure;
         cmd.Parameters.Add(new SqlParameter("@razao_social", SqlDbType.VarChar,50)).Value = enterprise.RazaoSocial;
         cmd.Parameters.Add(new SqlParameter("@cnpj", SqlDbType.VarChar,50)).Value = enterprise.CNPJ;
