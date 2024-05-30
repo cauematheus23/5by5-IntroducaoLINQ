@@ -13,4 +13,4 @@ Adm.PrintData(people);
 //Console.WriteLine("===============================\nOrder by name");
 //Adm.PrintData(Adm.FilterPeopleByNameUseLinq(people));
 Console.WriteLine("==============================");
-Adm.PrintData(Adm.FilterPeople4(people));
+//.PrintData(Adm.FilterPeople4(people));

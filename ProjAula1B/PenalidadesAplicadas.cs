@@ -21,6 +21,19 @@ namespace ProjAula1B
         [JsonProperty("vigencia_do_cadastro")]
         public DateTime VigenciaCadastro { get; set; }
 
+        public PenalidadesAplicadas()
+        {
+            
+        }
+        public PenalidadesAplicadas(string razaoSocial, string cNPJ, string nomeMotorista, string cPF, DateTime vigenciaCadastro)
+        {
+            RazaoSocial = razaoSocial;
+            CNPJ = cNPJ;
+            NomeMotorista = nomeMotorista;
+            CPF = cPF;
+            VigenciaCadastro = vigenciaCadastro;
+        }
+
         public override string? ToString() => $"RazãoSocial: {RazaoSocial},CNPJ: {CNPJ},NomeMotorista: {NomeMotorista}\nCPF: {CPF}";
     }
 
